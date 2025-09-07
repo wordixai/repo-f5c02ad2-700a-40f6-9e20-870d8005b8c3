@@ -61,7 +61,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Pop Art Colors
+				'pop-orange': 'hsl(var(--pop-orange))',
+				'pop-pink': 'hsl(var(--pop-pink))',
+				'pop-yellow': 'hsl(var(--pop-yellow))',
+				'pop-cyan': 'hsl(var(--pop-cyan))',
+				'pop-purple': 'hsl(var(--pop-purple))',
+				'pop-lime': 'hsl(var(--pop-lime))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -89,6 +96,11 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
+			},
+			fontFamily: {
+				comic: ['Bangers', 'cursive'],
+				bubble: ['Fredoka One', 'cursive'],
+				hand: ['Kalam', 'cursive'],
 			}
 		}
 	},

@@ -1,27 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Kalam:wght@400;700&family=Bangers&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
+The @apply directive should not be used with the group utility class.
 */
 
 @layer base {
   :root {
-   
-  }
-
-  .dark {
-
+    /* Pop Art Color Palette */
+    --pop-orange: 25 100% 55%;
+    --pop-pink: 325 100% 65%;
+    --pop-yellow: 48 100% 67%;
+    --pop-cyan: 188 100% 65%;
+    --pop-purple: 280 100% 70%;
+    --pop-lime: 78 100% 60%;
+    
+    /* Background Colors */
+    --background: 48 100% 95%;
+    --foreground: 240 10% 4%;
+    
+    /* Primary Colors */
+    --primary: 25 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary Colors */
+    --secondary: 325 100% 65%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Accent Colors */
+    --accent: 188 100% 65%;
+    --accent-foreground: 240 10% 4%;
+    
+    /* Comic Effects */
+    --comic-shadow: 240 10% 4%;
+    --comic-border: 240 100% 20%;
+    
+    /* UI Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 4%;
+    --muted: 210 40% 98%;
+    --muted-foreground: 215 13% 65%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 25 100% 55%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --radius: 1rem;
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
+/* Comic Book Effects */
+.comic-dots {
+  background-image: radial-gradient(circle, hsl(var(--pop-pink)) 15%, transparent 15%);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
 
-  body {
-    @apply bg-background text-foreground;
+.comic-dots-orange {
+  background-image: radial-gradient(circle, hsl(var(--pop-orange)) 12%, transparent 12%);
+  background-size: 15px 15px;
+}
+
+.comic-dots-cyan {
+  background-image: radial-gradient(circle, hsl(var(--pop-cyan)) 10%, transparent 10%);
+  background-size: 25px 25px;
+}
+
+.pop-gradient {
+  background: linear-gradient(45deg, hsl(var(--pop-orange)), hsl(var(--pop-pink)));
+}
+
+.pop-gradient-reverse {
+  background: linear-gradient(225deg, hsl(var(--pop-pink)), hsl(var(--pop-orange)));
+}
+
+.pop-gradient-triple {
+  background: linear-gradient(120deg, hsl(var(--pop-orange)) 0%, hsl(var(--pop-pink)) 50%, hsl(var(--pop-cyan)) 100%);
+}
+
+/* Comic Text Effects */
+.comic-text {
+  text-shadow: 3px 3px 0px hsl(var(--comic-shadow)),
+               6px 6px 0px hsl(var(--pop-pink)),
+               9px 9px 0px hsl(var(--pop-orange));
+}
+
+.comic-outline {
+  -webkit-text-stroke: 2px hsl(var(--comic-border));
+  text-shadow: 2px 2px 0px hsl(var(--background));
+}
+
+/* Comic Borders */
+.comic-border {
+  border: 4px solid hsl(var(--comic-border));
+  box-shadow: 6px 6px 0px hsl(var(--comic-shadow));
+}
+
+.comic-border-pink {
+  border: 4px solid hsl(var(--pop-pink));
+  box-shadow: 6px 6px 0px hsl(var(--comic-shadow));
+}
+
+.comic-border-orange {
+  border: 4px solid hsl(var(--pop-orange));
+  box-shadow: 6px 6px 0px hsl(var(--comic-shadow));
+}
+
+/* Bounce Animation */
+@keyframes bounce-fun {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(0deg);
   }
+  40% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  60% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+.bounce-fun {
+  animation: bounce-fun 2s infinite;
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+.wiggle {
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+/* Typography */
+.font-comic {
+  font-family: 'Bangers', cursive;
+}
+
+.font-bubble {
+  font-family: 'Fredoka One', cursive;
+}
+
+.font-hand {
+  font-family: 'Kalam', cursive;
+}
+
+/* Pop Art Button Effects */
+.pop-button {
+  transform: translateY(0);
+  transition: all 0.1s ease;
+}
+
+.pop-button:hover {
+  transform: translateY(-3px);
+}
+
+.pop-button:active {
+  transform: translateY(1px);
 }
