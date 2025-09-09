@@ -12,7 +12,9 @@ const products = [
     isNew: true,
     isSale: true,
     rating: 5,
-    colors: ["#FF6B6B", "#4ECDC4", "#45B7D1", "#FFA07A"]
+    colors: ["#FF6B6B", "#4ECDC4", "#45B7D1", "#FFA07A"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "Express your electric personality with this vibrant lightning bolt tee! Perfect for festivals, concerts, or making a statement anywhere you go."
   },
   {
     id: "2", 
@@ -22,7 +24,9 @@ const products = [
     isNew: false,
     isSale: false,
     rating: 4,
-    colors: ["#FF1493", "#00CED1", "#FFD700"]
+    colors: ["#FF1493", "#00CED1", "#FFD700"],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    description: "Stay cozy while making a bold statement! This hoodie features comic book-inspired graphics that pop off the fabric."
   },
   {
     id: "3",
@@ -33,7 +37,9 @@ const products = [
     isNew: false,
     isSale: true,
     rating: 5,
-    colors: ["#FF4500", "#FF1493", "#00FFFF", "#ADFF2F", "#FFD700"]
+    colors: ["#FF4500", "#FF1493", "#00FFFF", "#ADFF2F", "#FFD700"],
+    sizes: ["6", "7", "8", "9", "10", "11", "12"],
+    description: "Step into the future with these retro-inspired sneakers! Comfortable, stylish, and guaranteed to turn heads wherever you walk."
   },
   {
     id: "4",
@@ -43,7 +49,9 @@ const products = [
     isNew: true,
     isSale: false,
     rating: 4,
-    colors: ["#FF6B6B", "#4ECDC4", "#45B7D1"]
+    colors: ["#FF6B6B", "#4ECDC4", "#45B7D1"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "Light up the night with this electrifying jacket! Features glow-in-the-dark accents and bold geometric patterns."
   },
   {
     id: "5",
@@ -54,7 +62,9 @@ const products = [
     isNew: false,
     isSale: true,
     rating: 5,
-    colors: ["#FF1493", "#00CED1", "#FFD700", "#FF4500"]
+    colors: ["#FF1493", "#00CED1", "#FFD700", "#FF4500"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    description: "Turn heads with this stunning pop art dress! Perfect for parties, dates, or any time you want to make an artistic impression."
   },
   {
     id: "6",
@@ -64,7 +74,9 @@ const products = [
     isNew: true,
     isSale: false,
     rating: 4,
-    colors: ["#FF6B6B", "#4ECDC4"]
+    colors: ["#FF6B6B", "#4ECDC4"],
+    sizes: ["One Size"],
+    description: "Carry your essentials in style! This adorable bag features cartoon-inspired designs and plenty of space for all your daily needs."
   }
 ]
 

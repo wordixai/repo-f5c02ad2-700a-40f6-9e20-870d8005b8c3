@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ShoppingCart, Search, Menu, Zap, Star } from "lucide-react"
+import { Search, Menu, Zap, Star } from "lucide-react"
+import { CartDrawer } from "@/components/CartDrawer"
 
 export const Header = () => {
   return (
@@ -41,12 +41,7 @@ export const Header = () => {
               <Search className="h-5 w-5" />
             </Button>
             
-            <Button variant="comic" size="icon" className="relative">
-              <ShoppingCart className="h-5 w-5" />
-              <Badge className="absolute -top-2 -right-2 bg-pop-pink text-white font-bold h-6 w-6 rounded-full flex items-center justify-center text-xs">
-                3
-              </Badge>
-            </Button>
+            <CartDrawer />
 
             <Button variant="ghost" size="icon" className="md:hidden text-white hover:bg-white/20">
               <Menu className="h-5 w-5" />
